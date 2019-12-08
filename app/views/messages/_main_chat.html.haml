@@ -1,29 +1,29 @@
 .chat_main
-  .chat_main_top
-    .chat_main_top_left
-      %h2.chat_main_top_left_group テスト
-      %ul.chat_main_top_left_list テスト:テスト
-      %li.chat_main_top_left_list_member
-    .chat_main_top_edit_btn
+  .chat_main__top
+    .chat_main__top__left
+      %h2.chat_main__top__left--group テスト
+      %ul.chat_main__top__left--list テスト:テスト
+      %li.chat_main__top__left--list--member
+    .chat_main__top--edit_btn
       = link_to "Edit","#"
 
-  .chat_main_middle
-    .chat_main_middle_message
-      .chat_main_middle_message_info
-        %p.chat_main_middle_message_info_name テスト
-        %p.chat_main_middle_message_info_date 2019/12/6(Fri) 00:00:00
-      %p.chat_main_middle_message_text テスト
-    .chat_main_middle_message
-      .chat_main_middle_message_info
-        %p.chat_main_middle_message_info_name テスト
-        %p.chat_main_middle_message_info_date 2019/12/6(Fri) 00:00:00
-      %p.chat_main_middle_message_text テスト
+  .chat_main__middle
+    .chat_main__middle__message
+      .chat_main__middle__message__info
+        %p.chat_main__middle__message__info--name テスト
+        %p.chat_main__middle__message__info--date 2019/12/6(Fri) 00:00:00
+      %p.chat_main__middle__message--text テスト
+    .chat_main__middle__message
+      .chat_main__middle__message__info
+        %p.chat_main__middle__message__info--name テスト
+        %p.chat_main__middle__message__info--date 2019/12/6(Fri) 00:00:00
+      %p.chat_main__middle__message--text テスト
       
-  .chat_main_bottom
-    %form.chat_main_bottom_message
-      .chat_main_bottom_message_box
-        .chat_main_bottom_message_box_text type a message
-        %label.chat_main_bottom_message_box_image
+  .chat_main__bottom
+    %form.chat_main__bottom__message
+      .chat_main__bottom__message__box
+        .chat_main__bottom__message__box--text type a message
+        %label.chat_main__bottom__message__box--image_btn
           = icon('fa', 'image')
           %input{type: "file"}
-      .chat_main_bottom_message_btn Send
+      .chat_main__bottom__message--send_btn Send
