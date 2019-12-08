@@ -1,0 +1,29 @@
+.chat_main
+  .chat_main_top
+    .chat_main_top_left
+      %h2.chat_main_top_left_group テスト
+      %ul.chat_main_top_left_list テスト:テスト
+      %li.chat_main_top_left_list_member
+    .chat_main_top_edit_btn
+      = link_to "Edit","#"
+
+  .chat_main_middle
+    .chat_main_middle_message
+      .chat_main_middle_message_info
+        %p.chat_main_middle_message_info_name テスト
+        %p.chat_main_middle_message_info_date 2019/12/6(Fri) 00:00:00
+      %p.chat_main_middle_message_text テスト
+    .chat_main_middle_message
+      .chat_main_middle_message_info
+        %p.chat_main_middle_message_info_name テスト
+        %p.chat_main_middle_message_info_date 2019/12/6(Fri) 00:00:00
+      %p.chat_main_middle_message_text テスト
+      
+  .chat_main_bottom
+    %form.chat_main_bottom_message
+      .chat_main_bottom_message_box
+        .chat_main_bottom_message_box_text type a message
+        %label.chat_main_bottom_message_box_image
+          = icon('fa', 'image')
+          %input{type: "file"}
+      .chat_main_bottom_message_btn Send
