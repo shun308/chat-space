@@ -19,8 +19,17 @@
       .chat_main__middle__message__info
         %p.chat_main__middle__message__info--name テスト
         %p.chat_main__middle__message__info--date 2019/12/6(Fri) 00:00:00
-      %p.chat_main__middle__message__text テスト
-          .chat_main__middle__message__text--content
+      %p.chat_main__middle__message--text テスト
+
+  .chat_main__bottom
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'chat_main__bottom__message', placeholder: 'type a message'
+      .chat_main__bottom__message__box
+        = f.label :image, class: 'chat_main__bottom__message__box--text' do
+          = icon('fa', 'image')
+          = f.file_field :image, class: 'input'
+      = f.submit 'Send', class: 'chat_main__bottom__message--send_btn'
+      
   .chat_main__bottom
     %form.chat_main__bottom__message
       .chat_main__bottom__message__box
