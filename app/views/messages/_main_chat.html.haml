@@ -1,5 +1,5 @@
-.chat
-  .header
+.main_chat
+  .main_header
     .left-header
       .left-header__title
         = @group.name
@@ -9,7 +9,7 @@
         - @group.users.each do|user|
           = user.name
     .right-header
-      .right-header__button
+      .right-header__btn
         = link_to edit_group_path(current_user) do
           Edit
   .messages
@@ -18,8 +18,8 @@
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
+      .form__box
+        = f.label :image, class: 'form__box--image' do
           = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'hidden'
+          = f.file_field :image, class: 'send_btn'
       = f.submit 'Send', class: 'form__submit'

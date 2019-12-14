@@ -6,7 +6,8 @@
   color: $white;
   width: 300px;
   float: left;
-  .header {
+  overflow: scroll;
+  .side_header {
     background-color: $side_blue_dark;
     height: 100px;
     display: flex;
@@ -19,7 +20,7 @@
       font-weight: bold;
       font-size: $side_header_font;
     }
-    &__lists {
+    &__edit {
       width: 60px;
       display: flex;
       .list {
@@ -54,10 +55,10 @@
     }
   }
 }
-.chat {
+.main_chat {
   width: calc(100vw - 300px);
   float: left;
-  .header {
+  .main_header {
     height: 100px;
     padding: 0 40px;
     display: flex;
@@ -87,7 +88,7 @@
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
-      &__button {
+      &__btn {
       }
       a{
         color: $light_blue;
@@ -100,9 +101,10 @@
     background-color: #fafafa;
     padding: 35px 40px;
     height: calc(100vh - 190px);
+    overflow: scroll;
     .message {
       padding-bottom: 46px;
-      .upper-message {
+      .top-message {
         display: flex;
         margin-bottom: 12px;
         &__user-name {
@@ -115,10 +117,12 @@
           padding-left: 10px;
         }
       }
-      .lower-message {
+      .bottom-message {
         &__content {
           color: #434a54;
           font-size: 14px;
+        }
+        &__image{
         }
       }
     }
@@ -135,16 +139,16 @@
       width: calc(100% - 150px);
       padding-left: 10px;
     }
-    &__mask {
+    &__box {
       background-color: $white;
       float: left;
       height: 50px;
       padding-right: 10px;
-      &__image {
+      &--image {
         font-size: 20px;
         line-height: 50px;
       }
-      .hidden {
+      .send_btn {
         display: none;
       }
     }
