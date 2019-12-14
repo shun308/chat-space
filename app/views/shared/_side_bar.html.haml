@@ -1,8 +1,8 @@
 .side-bar
-  .header
-    %h3.header__name
+  .side_header
+    %h3.side_header__name
       = current_user.name
-    %ul.header__lists
+    %ul.side_header__edit
       %li.list
         = link_to new_group_path do
           = icon('fas', 'edit', class: 'icon')
