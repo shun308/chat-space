@@ -83,7 +83,7 @@ $(function(){
 
   var reloadMessages = function(){
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
-      var last_message_id = $('.message:last').data("message-id");
+      last_message_id = $('.message:last').data("message-id");
       $.ajax({
         url: "api/messages",
         type: 'get',
@@ -91,17 +91,21 @@ $(function(){
         data: {id: last_message_id}
       })
       .done(function(messages){
+        if (messages.length !== 0) {
         var insertHTML = '';
         $.each(messages, function(i, message){
           insertHTML = buildHTML(message)
       })
       $('.messages').append(insertHTML);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-    })
+      $("#new_message")[0].reset();
+      $(".form__submit").prop("disabled", false);
+    }
+  })
       .fail(function() {
         alert('error');
       });
-    }
+    };
   };
   setInterval(reloadMessages, 7000);
 });
